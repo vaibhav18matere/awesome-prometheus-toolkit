@@ -1,9 +1,13 @@
 import './App.css';
+import Layout from './Layout';
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <h1 className='text-2xl font-bold'>Awesome Prometheus Toolkit</h1>
+      <Layout>
+        <Homepage />
+      </Layout>
     </div>
   );
 }
