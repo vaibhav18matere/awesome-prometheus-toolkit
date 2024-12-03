@@ -57,7 +57,7 @@ export const Card = ({
       }))
     );
 
-    console.log("Extracted Data:", extractedData);
+    // console.log("Extracted Data:", extractedData);
     setModalData(extractedData);
     setIsModalOpen(true);
   };
@@ -67,22 +67,22 @@ export const Card = ({
   };
 
   return (
-    <div className="flex flex-col gap-4 border p-4 rounded">
+    <div className="flex flex-col gap-4 border p-4 rounded dark:border-gray-700 dark:bg-gray-800">
       <div className="flex items-center gap-2">
         {Icon && <Icon className={classname} />}
-        <span className="text-sm font-bold text-slate-600">{heading}</span>
+        <span className="text-sm font-bold text-black dark:text-white">{heading}</span>
       </div>
       <div>
-        <span className="text-xs font-bold uppercase text-slate-400 bg-slate-100 p-1 rounded-xl">
+        <span className="text-xs font-bold uppercase text-slate-400 bg-slate-100 dark:bg-gray-700 p-[6px] rounded-xl">
           {rules} rules
         </span>
-        <span className="text-xs font-medium text-slate-400">
+        <span className="text-xs font-medium text-black dark:text-white ml-2">
           {description}
         </span>
       </div>
       <button
         onClick={handleOpenModal}
-        className="inline-flex border items-center justify-center text-slate-600 rounded font-semibold text-xs leading-4 px-1 py-2 gap-[10px]"
+        className="inline-flex border items-center justify-center text-black dark:text-white dark:border-gray-600 rounded font-semibold text-xs leading-4 px-1 py-2 gap-[10px]"
       >
         Visit Alert Rules
       </button>
